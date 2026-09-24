@@ -27,7 +27,7 @@ Can genomic alterations combined with gene-expression profiles distinguish early
 * **Approach:** Filter variant lists and gene expression levels for key diagnostic markers, score each patient profile based on combined genomic features, and output stage classifications (Early vs. Late Stage).
 
 --------------------------------------
-**Approach and Pseudocode**
+**Approach/Pseudocode**
 
 **START**
   1. Open and read the file containing patient gene mutations
