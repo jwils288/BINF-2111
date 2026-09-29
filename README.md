@@ -1,11 +1,13 @@
 # BINF-2111
 Midterm Project for BINF 2111 - 001
-Can genomic alterations combined with gene-expression profiles, distinguish early-stage from late-stage pancreatic cancer?
+Can tumor RNA-sequencing data be used to predict early vs late stage pancreatic cancer and chemotherapy response?
 
 Background: 
-Pancreatic cancer is often difficult to detect and is frequently diagnosed after it has already progressed, making treatment more challenging. Understanding how the molecular characteristics of a tumor change as the cancer advances could help researchers identify patterns associated with disease progression.
+Pancreatic cancer is often diagnosed at an advanced stage and can behave differently from one patient to another. Some tumors progress more aggressively, while others may respond differently to chemotherapy. These differences can be influenced by which genes are active within the tumor.
 
-This project examines whether combining genomic alterations with gene-expression profiles can distinguish early-stage from late-stage pancreatic cancer. Identifying these molecular differences could improve our understanding of how pancreatic cancer develops and support future efforts to create better biomarkers and treatment strategies.
+This project examines whether tumor RNA-sequencing data can be used in a two-stage machine learning approach. The first stage will analyze gene-expression patterns to estimate tumor aggressiveness, progression risk, and metastatic potential. The second stage will evaluate gene-expression signatures associated with chemotherapy sensitivity or resistance in order to predict how the tumor may respond to different treatments.
+
+The overall goal is to produce a tailored tumor risk assessment and compare potential chemotherapy responses based on the molecular profile of the tumor. This could help improve our understanding of how gene-expression patterns relate to pancreatic cancer progression and treatment response, while supporting future research into more personalized cancer treatment strategies.
 
 --------------------------------------
 Team [Name] — Midterm Progress Report
@@ -20,7 +22,7 @@ Team [Name] — Midterm Progress Report
 --------------------------------------
 
 **Proposed Solution**
-Can genomic alterations combined with gene-expression profiles distinguish early-stage from late-stage pancreatic cancer?
+Can genomic alterations combined with gene-expression profiles distinguish early-stage from late-stage pancreatic cancer then propose the best potential chemotherapy response?
 
 ### Tool & Coding Language
 * **Language:** Python 3 (using standard libraries such as `sys` and `csv`)
@@ -29,17 +31,18 @@ Can genomic alterations combined with gene-expression profiles distinguish early
 --------------------------------------
 **Approach/Pseudocode**
 
-**START**
-  1. Open and read the file containing patient gene mutations
-  2. Open and read the file containing patient gene expression data (how active each gene is)
-  3. Clean up the gene numbers so all patient data can be compared fairly.
-  4. Check if the patient has any major cancer-linked gene mutations.
-  5. Calculate a total score based on the patient's gene activity and mutations.
-  6. IF the total score is higher than our cutoff limit:
-       Mark the patient as "Late-Stage Pancreatic Cancer"
-     ELSE:
-       Mark the patient as "Early-Stage Pancreatic Cancer"
-  7. Print out the final diagnosis and report how accurate our script was.
-END
+**START**  
+1. Open and read the file containing tumor RNA sequencing data.  
+2. Clean and organize the gene-expression data so all patient samples can be compared fairly.  
+3. Look for gene-expression patterns linked to aggressive or spreading tumors.  
+4. Give the tumor a risk score based on these gene-expression patterns.  
+5. Check gene-expression patterns linked to chemotherapy sensitivity or resistance.  
+6. Calculate a response score for each chemotherapy treatment.  
+7. Rank the chemotherapy treatments from highest predicted response to lowest predicted response.  
+8. Print the tumor risk score and the ranked chemotherapy treatment results.  
+9. Report how accurately the program predicted tumor risk and treatment response.  
+
+**END**  
+--------------------------------------
 --------------------------------------
 
