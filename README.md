@@ -36,9 +36,9 @@ START
 1. Open and read the file containing tumor RNA sequencing data.
 2. Open and read the patient clinical data, including cancer stage.
 3. Clean and organize the gene-expression data so all patient samples can be compared fairly.
-4. Label each patient as either Early-Stage or Late-Stage Pancreatic Cancer based on their known clinical stage.
-5. Look for gene-expression patterns that are different between early-stage and late-stage patients.
-6. Use those gene-expression patterns to build a model that predicts cancer stage.
+4. Label each patient as either Early-Stage or Late-Stage Pancreatic Cancer based on their known clinical stage. 
+5. Look for gene-expression patterns that are different between early-stage and late-stage patients. Also look for patterns from past patients linked to chemotherapy resistance.
+6. Use those gene-expression patterns to build a model that predicts cancer stage and best chemotherapy options.
 7. Give the model a new patient’s RNA data.
 8. IF the model predicts the patient matches late-stage patterns:
    Mark the patient as “Late-Stage Pancreatic Cancer.”
