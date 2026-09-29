@@ -32,18 +32,21 @@ Can genomic alterations combined with gene-expression profiles distinguish early
 --------------------------------------
 **Approach/Pseudocode**
 
-**START**  
-1. Open and read the file containing tumor RNA sequencing data.  
-2. Clean and organize the gene-expression data so all patient samples can be compared fairly.  
-3. Look for gene-expression patterns linked to aggressive or spreading tumors.  
-4. Give the tumor a risk score based on these gene-expression patterns.  
-5. Check gene-expression patterns linked to chemotherapy sensitivity or resistance.  
-6. Calculate a response score for each chemotherapy treatment.  
-7. Rank the chemotherapy treatments from highest predicted response to lowest predicted response.  
-8. Print the tumor risk score and the ranked chemotherapy treatment results.  
-9. Report how accurately the program predicted tumor risk and treatment response.  
-
-**END**  
+START  
+1. Open and read the file containing tumor RNA sequencing data.
+2. Open and read the patient clinical data, including cancer stage.
+3. Clean and organize the gene-expression data so all patient samples can be compared fairly.
+4. Label each patient as either Early-Stage or Late-Stage Pancreatic Cancer based on their known clinical stage.
+5. Look for gene-expression patterns that are different between early-stage and late-stage patients.
+6. Use those gene-expression patterns to build a model that predicts cancer stage.
+7. Give the model a new patient’s RNA data.
+8. IF the model predicts the patient matches late-stage patterns:
+   Mark the patient as “Late-Stage Pancreatic Cancer.”
+   ELSE:
+   Mark the patient as “Early-Stage Pancreatic Cancer.”
+9. Print the predicted stage.
+10. Compare the prediction to the real patient stage and report how accurate the model is.
+END
 --------------------------------------
 --------------------------------------
 
