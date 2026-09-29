@@ -1,5 +1,6 @@
 # BINF-2111
 Midterm Project for BINF 2111 - 001
+
 Can tumor RNA-sequencing data be used to predict early vs late stage pancreatic cancer and chemotherapy response?
 
 Background: 
