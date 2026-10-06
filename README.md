@@ -17,7 +17,7 @@ Team [Name] — Midterm Progress Report
 ## Team Members & Roles - Roles: (Research, Handling github, coding, overall style/keeping group on track)
 * **Sesina:** [To Be Finalized]
 * **Lean Saavedra Lopez:** Coding, GitHub, & Research
-* **Jalen:** [To Be Finalized]
+* **Jalen:** Research, Github
 * **Melissa:** Searching for Specific Genomic Variants
 
 --------------------------------------
