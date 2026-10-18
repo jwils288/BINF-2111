@@ -1,52 +1,65 @@
-# BINF-2111
-Midterm Project for BINF 2111 - 001
+# BINF-2111 Midterm Project: Team Genome4!
 
-Can tumor RNA-sequencing data be used to predict early vs late stage pancreatic cancer and chemotherapy response?
+**Course:** BINF 2111 - 001  
+**Project Title:** Can tumor RNA-sequencing data be used to predict early vs. late stage pancreatic cancer and chemotherapy response?
 
-Background: 
+---
+
+## 📌 Background & Research Question
 Pancreatic cancer is often diagnosed at an advanced stage and can behave differently from one patient to another. Some tumors progress more aggressively, while others may respond differently to chemotherapy. These differences can be influenced by which genes are active within the tumor.
 
-This project examines whether tumor RNA-sequencing data can be used in a two-stage machine learning approach. The first stage will analyze gene-expression patterns to estimate tumor aggressiveness, progression risk, and metastatic potential. The second stage will evaluate gene-expression signatures associated with chemotherapy sensitivity or resistance in order to predict how the tumor may respond to different treatments.
+**Primary Question:**  
+*Can genomic alterations combined with gene-expression profiles distinguish early-stage from late-stage pancreatic cancer, and propose potential chemotherapy response indicators?*
 
-The overall goal is to produce a tailored tumor risk assessment and compare potential chemotherapy responses based on the molecular profile of the tumor. This could help improve our understanding of how gene-expression patterns relate to pancreatic cancer progression and treatment response, while supporting future research into more personalized cancer treatment strategies.
+This project examines whether tumor RNA-sequencing data can be evaluated in a two-stage analytical approach:
+1. **Stage Classification:** Analyze gene-expression patterns to estimate tumor aggressiveness, progression risk, and stage (Early vs. Late).
+2. **Chemotherapy Profile Context:** Evaluate gene-expression signatures associated with chemotherapy sensitivity or resistance to better understand treatment profiles.
 
---------------------------------------
-Team [Name] — Midterm Progress Report
-**Course:** BINF 2111 - 001
+---
 
-## Team Members & Roles - Roles: (Research, Handling github, coding, overall style/keeping group on track)
-* **Sesina:** [To Be Finalized]
-* **Lean Saavedra Lopez:** Coding, GitHub, & Research
-* **Jalen:** Research, Github
-* **Melissa:** Searching for Specific Genomic Variants
+## 👥 Team Members & Roles
+* **Lean Saavedra Lopez:** Project Concept & Formulation, Lead Coding (`pancreatic_analysis.py`), GitHub Management, and Research
+* **Sesina:** Data Tracking, Metrics Organization, and Presentation Development
+* **Jalen:** Primary Literature Research & GitHub Support
+* **Melissa:** Specific Genomic Variant Search (NCBI) & RNA-seq Matrix Retrieval
 
---------------------------------------
+---
 
-**Proposed Solution**
-Can genomic alterations combined with gene-expression profiles distinguish early-stage from late-stage pancreatic cancer then propose the best potential chemotherapy response?
+## 🧬 Target Marker Genes
+Our analysis evaluates gene expression variations for key diagnostic markers that are frequently overexpressed in advanced pancreatic adenocarcinoma and squamous cell carcinomas:
+* **ANGPTL4** (Angiopoietin 4) — [NCBI NM_139314.3](https://www.ncbi.nlm.nih.gov/nuccore/NM_139314.3/)
+* **S100P** — [NCBI NM_005980.3](https://www.ncbi.nlm.nih.gov/nuccore/NM_005980.3/)
+* **KRT19** — [NCBI NM_002276.5](https://www.ncbi.nlm.nih.gov/nuccore/NM_002276.5/)
+* **COL6A3** (Collagen Type VI Alpha 3) — [NCBI NM_004369.4](https://www.ncbi.nlm.nih.gov/nuccore/NM_004369.4)
+* **PLAU** — [NCBI NM_002658.6](https://www.ncbi.nlm.nih.gov/nuccore/NM_002658.6/)
+* **MMP7** — [NCBI NM_002423.5](https://www.ncbi.nlm.nih.gov/nuccore/NM_002423.5/)
+* **SLC16A3** — [NCBI NM_004207.4](https://www.ncbi.nlm.nih.gov/nuccore/NM_004207.4/)
 
-### Tool & Coding Language
-* **Language:** Python 3 (using standard libraries such as `sys` and `csv`)
-* **Approach:** Filter variant lists and gene expression levels for key diagnostic markers, score each patient profile based on combined genomic features, and output stage classifications (Early vs. Late Stage).
+---
 
---------------------------------------
-**Approach/Pseudocode**
+## 📊 Datasets Used
+* **TCGA-PAAD:** Pancreatic Adenocarcinoma RNA-seq expression and clinical stage data ([GDC Portal](https://portal.gdc.cancer.gov/projects/TCGA-PAAD)).
+* **GSE252327 / GSE252347:** Pancreatic Squamous Cell Carcinoma datasets evaluating tumor sub-types and treatment contexts.
 
-START  
-1. Open and read the file containing tumor RNA sequencing data.
-2. Open and read the patient clinical data, including cancer stage.
-3. Clean and organize the gene-expression data so all patient samples can be compared fairly.
-4. Label each patient as either Early-Stage or Late-Stage Pancreatic Cancer based on their known clinical stage. 
-5. Look for gene-expression patterns that are different between early-stage and late-stage patients. Also look for patterns from past patients linked to chemotherapy resistance.
-6. Use those gene-expression patterns to build a model that predicts cancer stage and best chemotherapy options.
-7. Give the model a new patient’s RNA data.
-8. IF the model predicts the patient matches late-stage patterns:
-   Mark the patient as “Late-Stage Pancreatic Cancer.”
-   ELSE:
-   Mark the patient as “Early-Stage Pancreatic Cancer.”
-9. Print the predicted stage.
-10. Compare the prediction to the real patient stage and report how accurate the model is.
-END
---------------------------------------
---------------------------------------
+---
 
+## 🛠️ Tools & Approach
+* **Language:** Python 3 (standard libraries including `sys`, `csv`, and `math` / `matplotlib` for visualizations).
+* **Approach:** Filter expression matrices for target diagnostic markers, process patient stage classifications, calculate stage-specific mean expression levels, and output summary statistics.
+
+### Pseudocode Workflow
+1. Open and read tumor RNA-sequencing and clinical patient data.
+2. Clean and normalize gene-expression data across patient samples.
+3. Label each patient sample as **Early-Stage** (Stage I/II) or **Late-Stage** (Stage III/IV).
+4. Evaluate expression profiles across target genes for stage differentiation.
+5. Compute summary metrics comparing mean gene expression levels between early and late stages.
+6. Generate output summary tables (`.csv`) and diagnostic visualization figures (`.png`).
+
+---
+
+## 🚀 How to Run the Analysis
+
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/jwils288/BINF-2111.git](https://github.com/jwils288/BINF-2111.git)
+   cd BINF-2111
