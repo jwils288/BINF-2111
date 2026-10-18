@@ -18,10 +18,10 @@ This project examines whether tumor RNA-sequencing data can be evaluated in a tw
 ---
 
 ## 👥 Team Members & Roles
-* **Lean Saavedra Lopez:** Project Concept & Formulation, Lead Coding (`pancreatic_analysis.py`), GitHub Management, and Research
-* **Sesina:** Data Tracking, Metrics Organization, and Presentation Development
-* **Jalen:** Primary Literature Research & GitHub Support
-* **Melissa:** Specific Genomic Variant Search (NCBI) & RNA-seq Matrix Retrieval
+* **Lean Saavedra Lopez:** Project Concept, Lead Coding (`pancreatic_analysis.py`), GitHub Management
+* **Sesina:** Presentation Development
+* **Jalen:** GitHub Support
+* **Melissa:** Specific Genomic Variant Search (NCBI) & RNA-seq Matrix Retrieval, Research
 
 ---
 
