@@ -47,6 +47,10 @@ Our analysis evaluates gene expression variations for key diagnostic markers tha
 * **Language:** Python 3 (standard libraries including `sys`, `csv`, and `math` / `matplotlib` for visualizations).
 * **Approach:** Filter expression matrices for target diagnostic markers, process patient stage classifications, calculate stage-specific mean expression levels, and output summary statistics.
 
+* Current Scope: This midterm project analyzes pancreatic tumor RNA-sequencing data to compare target gene-expression levels between early-stage and late-stage patient groups.
+
+* Future Work: Extend the analysis to investigate gene-expression signatures associated with chemotherapy sensitivity and resistance. The current analysis does not independently establish treatment response or provide a clinically validated prediction.
+---
 ### Pseudocode Workflow
 BEGIN
     Load RNA-seq expression data and clinical patient data
