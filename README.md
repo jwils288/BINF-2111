@@ -48,13 +48,25 @@ Our analysis evaluates gene expression variations for key diagnostic markers tha
 * **Approach:** Filter expression matrices for target diagnostic markers, process patient stage classifications, calculate stage-specific mean expression levels, and output summary statistics.
 
 ### Pseudocode Workflow
-1. Open and read tumor RNA-sequencing and clinical patient data.
-2. Clean and normalize gene-expression data across patient samples.
-3. Label each patient sample as **Early-Stage** (Stage I/II) or **Late-Stage** (Stage III/IV).
-4. Evaluate expression profiles across target genes for stage differentiation.
-5. Compute summary metrics comparing mean gene expression levels between early and late stages.
-6. Generate output summary tables (`.csv`) and diagnostic visualization figures (`.png`).
+BEGIN
+    Load RNA-seq expression data and clinical patient data
+    Load the target marker genes
+    Match expression samples to patient clinical records
 
+    FOR each matched patient sample
+        Determine whether the sample is early-stage or late-stage
+        Extract expression values for the target marker genes
+    END FOR
+
+    FOR each target gene
+        Calculate mean expression in the early-stage group
+        Calculate mean expression in the late-stage group
+        Compare the two mean expression values
+    END FOR
+
+    Save summary statistics to CSV files
+    Generate gene-expression comparison charts
+END
 ---
 
 ## 🚀 How to Run the Analysis
