@@ -5,7 +5,7 @@
 
 ---
 
-## 📌 Background & Research Question
+## Background & Research Question
 Pancreatic cancer is often diagnosed at an advanced stage and can behave differently from one patient to another. Some tumors progress more aggressively, while others may respond differently to chemotherapy. These differences can be influenced by which genes are active within the tumor.
 
 **Primary Question:**  
@@ -17,7 +17,7 @@ This project examines whether tumor RNA-sequencing data can be evaluated in a tw
 
 ---
 
-## 👥 Team Members & Roles
+## Team Members & Roles
 * **Lean Saavedra Lopez:** Project Concept, Lead Coding (`pancreatic_analysis.py`), GitHub Management
 * **Sesina:** Presentation Development
 * **Jalen:** GitHub Support
@@ -25,7 +25,7 @@ This project examines whether tumor RNA-sequencing data can be evaluated in a tw
 
 ---
 
-## 🧬 Target Marker Genes
+## Target Marker Genes
 Our analysis evaluates gene expression variations for key diagnostic markers that are frequently overexpressed in advanced pancreatic adenocarcinoma and squamous cell carcinomas:
 * **ANGPTL4** (Angiopoietin 4) — [NCBI NM_139314.3](https://www.ncbi.nlm.nih.gov/nuccore/NM_139314.3/)
 * **S100P** — [NCBI NM_005980.3](https://www.ncbi.nlm.nih.gov/nuccore/NM_005980.3/)
@@ -37,13 +37,13 @@ Our analysis evaluates gene expression variations for key diagnostic markers tha
 
 ---
 
-## 📊 Datasets Used
+## Datasets Used
 * **TCGA-PAAD:** Pancreatic Adenocarcinoma RNA-seq expression and clinical stage data ([GDC Portal](https://portal.gdc.cancer.gov/projects/TCGA-PAAD)).
 * **GSE252327 / GSE252347:** Pancreatic Squamous Cell Carcinoma datasets evaluating tumor sub-types and treatment contexts.
 
 ---
 
-## 🛠️ Tools & Approach
+## Tools & Approach
 * **Language:** Python 3 (standard libraries including `sys`, `csv`, and `math` / `matplotlib` for visualizations).
 * **Approach:** Filter expression matrices for target diagnostic markers, process patient stage classifications, calculate stage-specific mean expression levels, and output summary statistics.
 
@@ -73,7 +73,7 @@ BEGIN
 END
 ---
 
-## 🚀 How to Run the Analysis
+## How to Run the Analysis
 
 1. Clone the repository:
    ```bash
