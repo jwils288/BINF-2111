@@ -1,0 +1,2 @@
+pandas - Helps the program organize and analyze data, such as gene expression levels and cancer stages.
+matplotlib - Helps the program create charts to visualize differences in gene expression.
